@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.ljj</groupId>
-            <artifactId>shiny-common-service</artifactId>
+            <artifactId>shiny-common-web</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
