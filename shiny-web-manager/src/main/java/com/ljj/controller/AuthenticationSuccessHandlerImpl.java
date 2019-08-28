@@ -1,9 +1,9 @@
 package com.ljj.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.pojo.system.LoginLog;
-import com.qingcheng.service.system.LoginLogService;
-import com.qingcheng.util.WebUtil;
+import com.ljj.pojo.system.LoginLog;
+import com.ljj.service.system.LoginLogService;
+import com.ljj.util.WebUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 

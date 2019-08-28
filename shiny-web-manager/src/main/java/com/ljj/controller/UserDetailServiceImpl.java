@@ -1,8 +1,9 @@
 package com.ljj.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.pojo.system.Admin;
-import com.qingcheng.service.system.AdminService;
+
+import com.ljj.pojo.system.Admin;
+import com.ljj.service.system.AdminService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -24,7 +25,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         System.out.println("经过了UserDetailServiceImpl");
 
-        Map map=new HashMap<>();
+        Map map=new HashMap();
         map.put("loginName",s);
         map.put("status","1");
         List<Admin> list = adminService.findList(map);
