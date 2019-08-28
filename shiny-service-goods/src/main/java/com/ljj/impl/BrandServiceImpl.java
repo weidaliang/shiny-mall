@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.BrandMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.goods.Brand;
-import com.qingcheng.service.goods.BrandService;
+import com.ljj.dao.BrandMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.goods.Brand;
+import com.ljj.service.goods.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

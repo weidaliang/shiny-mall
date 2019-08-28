@@ -39,7 +39,6 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -84,11 +83,7 @@
             <scope>compile</scope>
         </dependency>
 
-        <!--引入spring security-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+
 
     </dependencies>
 </project>

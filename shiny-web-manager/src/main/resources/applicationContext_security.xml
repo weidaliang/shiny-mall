@@ -40,7 +40,7 @@
         </authentication-provider>
     </authentication-manager>
 
-    <beans:bean id="userDetailService" class="com.qingcheng.controller.UserDetailServiceImpl"></beans:bean>
+    <beans:bean id="userDetailService" class="com.ljj.controller.UserDetailServiceImpl"></beans:bean>
     <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></beans:bean>
-    <beans:bean id="loginHandler" class="com.qingcheng.controller.AuthenticationSuccessHandlerImpl"></beans:bean>
+    <beans:bean id="loginHandler" class="com.ljj.controller.AuthenticationSuccessHandlerImpl"></beans:bean>
 </beans:beans>-->

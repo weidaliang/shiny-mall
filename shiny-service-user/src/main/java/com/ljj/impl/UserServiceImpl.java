@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.UserMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.user.User;
-import com.qingcheng.service.user.UserService;
+import com.ljj.dao.UserMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.user.User;
+import com.ljj.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

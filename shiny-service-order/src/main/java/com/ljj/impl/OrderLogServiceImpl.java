@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.OrderLogMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.order.OrderLog;
-import com.qingcheng.service.order.OrderLogService;
+import com.ljj.dao.OrderLogMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.order.OrderLog;
+import com.ljj.service.order.OrderLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

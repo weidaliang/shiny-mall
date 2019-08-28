@@ -13,9 +13,9 @@ import java.util.Map;
 public class LoginController {
 
     @GetMapping("/name")
-    public Map showName(){
+    public Map<String, String> showName(){
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        Map map=new HashMap();
+        Map<String, String> map=new HashMap<String, String>();
         map.put("name",name);
         return map;
     }

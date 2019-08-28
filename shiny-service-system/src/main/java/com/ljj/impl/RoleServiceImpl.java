@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.RoleMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.system.Role;
-import com.qingcheng.service.system.RoleService;
+import com.ljj.dao.RoleMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.system.Role;
+import com.ljj.service.system.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

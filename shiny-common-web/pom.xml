@@ -12,6 +12,11 @@
     <artifactId>shiny-common-web</artifactId>
 
     <dependencies>
+        <!--引入spring security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.ljj</groupId>
             <artifactId>shiny-common</artifactId>
@@ -23,5 +28,12 @@
             <artifactId>shiny-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+
     </dependencies>
 </project>

@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.AreasMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.user.Areas;
-import com.qingcheng.service.user.AreasService;
+import com.ljj.dao.AreasMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.user.Areas;
+import com.ljj.service.user.AreasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

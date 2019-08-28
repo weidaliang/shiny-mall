@@ -1,10 +1,10 @@
 package com.ljj.controller.order;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.entity.Result;
-import com.qingcheng.pojo.order.ReturnOrder;
-import com.qingcheng.service.order.ReturnOrderService;
+import com.ljj.entity.PageResult;
+import com.ljj.entity.Result;
+import com.ljj.pojo.order.ReturnOrder;
+import com.ljj.service.order.ReturnOrderService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

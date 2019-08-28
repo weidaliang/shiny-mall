@@ -1,10 +1,10 @@
 package com.ljj.controller.system;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.entity.Result;
-import com.qingcheng.pojo.system.LoginLog;
-import com.qingcheng.service.system.LoginLogService;
+import com.ljj.entity.PageResult;
+import com.ljj.entity.Result;
+import com.ljj.pojo.system.LoginLog;
+import com.ljj.service.system.LoginLogService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 

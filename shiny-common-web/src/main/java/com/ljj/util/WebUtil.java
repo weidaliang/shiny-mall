@@ -19,7 +19,7 @@ public class WebUtil {
     //GET字符集设置处理
     public static Map<String, String> convertCharsetToUTF8(Map<String, String> searchMap) throws Exception {
         Iterator<Map.Entry<String, String>> entries = searchMap.entrySet().iterator();
-        Map map = new HashMap();
+        Map<String, String> map = new HashMap<String, String>();
         while (entries.hasNext()) {
             Map.Entry<String, String> entry = entries.next();
             map.put(new String(entry.getKey().getBytes("ISO8859-1"), "UTF-8"), new String(entry.getValue().getBytes("ISO8859-1"), "UTF-8"));

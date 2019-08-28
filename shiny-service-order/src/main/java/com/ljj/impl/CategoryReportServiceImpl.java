@@ -1,9 +1,9 @@
 package com.ljj.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.qingcheng.dao.CategoryReportMapper;
-import com.qingcheng.pojo.order.CategoryReport;
-import com.qingcheng.service.order.CategoryReportService;
+import com.ljj.dao.CategoryReportMapper;
+import com.ljj.pojo.order.CategoryReport;
+import com.ljj.service.order.CategoryReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

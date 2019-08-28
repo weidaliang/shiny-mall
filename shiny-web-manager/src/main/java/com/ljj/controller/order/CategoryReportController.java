@@ -1,8 +1,8 @@
 package com.ljj.controller.order;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.pojo.order.CategoryReport;
-import com.qingcheng.service.order.CategoryReportService;
+import com.ljj.pojo.order.CategoryReport;
+import com.ljj.service.order.CategoryReportService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

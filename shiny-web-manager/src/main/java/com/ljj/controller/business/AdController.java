@@ -1,10 +1,10 @@
 package com.ljj.controller.business;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.entity.Result;
-import com.qingcheng.pojo.business.Ad;
-import com.qingcheng.service.business.AdService;
+import com.ljj.entity.PageResult;
+import com.ljj.entity.Result;
+import com.ljj.pojo.business.Ad;
+import com.ljj.service.business.AdService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

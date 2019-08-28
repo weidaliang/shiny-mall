@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.ReturnOrderItemMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.order.ReturnOrderItem;
-import com.qingcheng.service.order.ReturnOrderItemService;
+import com.ljj.dao.ReturnOrderItemMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.order.ReturnOrderItem;
+import com.ljj.service.order.ReturnOrderItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

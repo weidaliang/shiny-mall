@@ -1,7 +1,7 @@
 package com.ljj.controller.order;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.service.order.CategoryReportService;
+import com.ljj.service.order.CategoryReportService;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 

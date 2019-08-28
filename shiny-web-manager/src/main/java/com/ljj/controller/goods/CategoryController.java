@@ -1,10 +1,10 @@
 package com.ljj.controller.goods;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.entity.Result;
-import com.qingcheng.pojo.goods.Category;
-import com.qingcheng.service.goods.CategoryService;
+import com.ljj.entity.PageResult;
+import com.ljj.entity.Result;
+import com.ljj.pojo.goods.Category;
+import com.ljj.service.goods.CategoryService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

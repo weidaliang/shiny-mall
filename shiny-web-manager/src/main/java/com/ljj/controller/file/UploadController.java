@@ -20,6 +20,9 @@ public class UploadController {
     @Autowired
     private HttpServletRequest request;
 
+    @Autowired
+    private OSSClient ossClient;
+
     @PostMapping("/native")
     public String nativeUpload(@RequestParam("file") MultipartFile file) {
         String path=request.getSession().getServletContext().getRealPath("img");
@@ -36,9 +39,6 @@ public class UploadController {
         System.out.println("path:---"+filePath);
         return "http://localhost:9101/img/"+file.getOriginalFilename();
     }
-
-    @Autowired
-    private OSSClient ossClient;
 
     @PostMapping("/oss")
     public String ossUpload(@RequestParam("file") MultipartFile file, String folder){

@@ -1,6 +1,6 @@
 package com.ljj.dao;
 
-import com.qingcheng.pojo.order.CategoryReport;
+import com.ljj.pojo.order.CategoryReport;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.Mapper;

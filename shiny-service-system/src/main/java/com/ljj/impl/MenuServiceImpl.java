@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.MenuMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.system.Menu;
-import com.qingcheng.service.system.MenuService;
+import com.ljj.dao.MenuMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.system.Menu;
+import com.ljj.service.system.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

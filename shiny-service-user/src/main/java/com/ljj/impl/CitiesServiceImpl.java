@@ -2,10 +2,10 @@ package com.ljj.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.qingcheng.dao.CitiesMapper;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.pojo.user.Cities;
-import com.qingcheng.service.user.CitiesService;
+import com.ljj.dao.CitiesMapper;
+import com.ljj.entity.PageResult;
+import com.ljj.pojo.user.Cities;
+import com.ljj.service.user.CitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 

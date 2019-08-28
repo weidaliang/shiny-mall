@@ -1,10 +1,10 @@
 package com.ljj.controller.user;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.qingcheng.entity.PageResult;
-import com.qingcheng.entity.Result;
-import com.qingcheng.pojo.user.Areas;
-import com.qingcheng.service.user.AreasService;
+import com.ljj.entity.PageResult;
+import com.ljj.entity.Result;
+import com.ljj.pojo.user.Areas;
+import com.ljj.service.user.AreasService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
