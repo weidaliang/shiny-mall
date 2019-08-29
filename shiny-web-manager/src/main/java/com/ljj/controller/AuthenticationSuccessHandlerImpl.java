@@ -3,7 +3,7 @@ package com.ljj.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.ljj.pojo.system.LoginLog;
 import com.ljj.service.system.LoginLogService;
-import com.ljj.util.WebUtil;
+import com.ljj.WebUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 

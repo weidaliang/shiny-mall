@@ -1,4 +1,4 @@
-package com.ljj.util;
+package com.ljj;
 
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;

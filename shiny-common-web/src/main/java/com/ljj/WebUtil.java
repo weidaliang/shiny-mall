@@ -1,4 +1,4 @@
-package com.ljj.util;
+package com.ljj;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
