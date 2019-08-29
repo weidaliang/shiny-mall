@@ -22,7 +22,7 @@ import java.sql.SQLException;
  * Date: 2019/8/29
  * Time: 16:17
  */
-//@Configuration
+@Configuration
 public class DruidConfiguration {
 
     private static final Logger logger = LoggerFactory.getLogger(DruidConfiguration.class);

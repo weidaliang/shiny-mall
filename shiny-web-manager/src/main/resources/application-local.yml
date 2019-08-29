@@ -1,0 +1,29 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /manager
+
+dubbo:
+  application:
+    name: manager-consumer
+  registry:
+    address: zookeeper://60.205.190.198:2181
+#  monitor:
+#    protocol: registry
+
+# 日志
+project:
+  log:
+    app:
+      name: shiny-web-manager
+      level: INFO
+    path: /soft/apps/logs/manager
+    sql:
+      level: DEBUG
+
+oss:
+  endpoint: endpoint
+  keyid: id
+  keysecret: keysecret
+  filehost: filehost
+  bucketname: bucketname

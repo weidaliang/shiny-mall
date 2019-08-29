@@ -45,7 +45,8 @@ public class ActivityController {
 
     @PostMapping("/add")
     public Result add(@RequestBody Activity activity){
-        activityService.add(activity);
+//        activityService.add(activity);
+        System.out.println("add方法请求成功！");
         return new Result();
     }
 

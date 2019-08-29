@@ -37,8 +37,8 @@ dubbo:
   application:
     name: business-provider
   registry:
-    protocol: multicast
-    address: 234.10.10.10:2181
+    protocol: zookeeper #multicast
+    address: 60.205.190.198:2181
   protocol:
     name: dubbo
     port: 20881

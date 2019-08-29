@@ -1,6 +1,6 @@
 package com.ljj.controller.file;
 
-import com.aliyun.oss.OSSClient;
+import com.ljj.util.AliyunOSSUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,8 +10,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.IOException;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/upload")
@@ -19,9 +17,6 @@ public class UploadController {
 
     @Autowired
     private HttpServletRequest request;
-
-    @Autowired
-    private OSSClient ossClient;
 
     @PostMapping("/native")
     public String nativeUpload(@RequestParam("file") MultipartFile file) {
@@ -41,15 +36,8 @@ public class UploadController {
     }
 
     @PostMapping("/oss")
-    public String ossUpload(@RequestParam("file") MultipartFile file, String folder){
-        String bucketName = "qing-cheng";
-        String fileName= folder+"/"+ UUID.randomUUID()+"_"+file.getOriginalFilename();
-        try {
-            ossClient.putObject(bucketName, fileName, file.getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "http://"+bucketName+"."+ ossClient.getEndpoint().toString().replace("http://","") +"/"+fileName;
+    public String ossUpload(@RequestParam("file") File file, String folder){
+        return AliyunOSSUtil.upload(file);
     }
 
 
