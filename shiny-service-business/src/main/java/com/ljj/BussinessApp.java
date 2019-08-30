@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableDubbo // 启动dubbo的配置
 @SpringBootApplication
 @MapperScan("com.ljj.dao")
-
 public class BussinessApp {
     public static void main(String[] args) {
         SpringApplication.run(BussinessApp.class,args);

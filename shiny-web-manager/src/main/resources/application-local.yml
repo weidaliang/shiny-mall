@@ -8,8 +8,8 @@ dubbo:
     name: manager-consumer
   registry:
     address: zookeeper://60.205.190.198:2181
-#  monitor:
-#    protocol: registry
+  monitor:
+    protocol: registry
 
 # 日志
 project:

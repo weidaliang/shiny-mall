@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 使用spring配置文件定义日志级别和路径 -->
+    <springProperty scope="context" source="project.log.app.name" name="LOG_APP_NAME" />
+    <springProperty scope="context" source="project.log.path" name="LOG_PATH" />
+    <springProperty scope="context" source="project.log.app.level" name="LOG_APP_LEVEL" />
+    <springProperty scope="context" source="project.log.sql.level" name="LOG_SQL_LEVEL" />
+
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <!-- 彩色日志 -->
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    <!-- 彩色日志格式 -->
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}" />
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %X{traceId} %logger{50}.%method - %msg%n"/>
+    <!-- 不用彩色控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--//&lt;!&ndash;格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符&ndash;&gt;-->
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [${LOG_APP_NAME}] [%thread] %-5level %logger{50}.%method - %msg%n</pattern> -->
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    <!-- 按照每天生成日志文件 -->
+    <appender name="DAYALL"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${LOG_PATH}/all_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>200MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [${LOG_APP_NAME}] [%thread] %-5level %logger{50}.%method - %msg%n</pattern> -->
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="DAYERROR"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${LOG_PATH}/error_%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxFileSize>200MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>error</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [${LOG_APP_NAME}] [%thread] %-5level %logger{50}.%method - %msg%n</pattern> -->
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志输出级别 -->
+    <root level="${LOG_APP_LEVEL}">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="DAYERROR" />
+        <appender-ref ref="DAYALL" />
+    </root>
+
+	<logger name="com.ljj.dao" additivity="true" level="${LOG_SQL_LEVEL}" />
+    <logger name="com.ljj.service.impl" additivity="true" level="${LOG_SQL_LEVEL}" />
+    <logger name="${LOG_APP_NAME}" additivity="true" level="${LOG_APP_LEVEL}" />
+    <logger name="com.alibaba.dubbo" additivity="true" level="ERROR" />
+</configuration>
