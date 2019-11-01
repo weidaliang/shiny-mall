@@ -4,6 +4,8 @@ import com.alibaba.dubbo.config.annotation.Reference;
 
 import com.ljj.pojo.system.Admin;
 import com.ljj.service.system.AdminService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -17,13 +19,13 @@ import java.util.List;
 import java.util.Map;
 
 public class UserDetailServiceImpl implements UserDetailsService {
-
+    private static final Logger logger = LoggerFactory.getLogger(UserDetailServiceImpl.class);
 
     @Reference
     private AdminService adminService;
 
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        System.out.println("经过了UserDetailServiceImpl");
+        logger.info("经过了UserDetailServiceImpl");
 
         Map map=new HashMap();
         map.put("loginName",s);
